@@ -9,7 +9,10 @@ class HomePage extends GetView<HomeController> {
         body: SafeArea(
             child: Row(
       children: [
-        Text('HomeController'),
+        Expanded(child: Text('HomeController')),
+        Expanded(
+          child: Text('a'),
+        ),
       ],
     )));
   }
