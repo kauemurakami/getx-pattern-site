@@ -45733,7 +45733,7 @@ N.oC.prototype={
 rH:function(){S.a3I($.b1(),new N.Jk(),t.ry)},
 $iId:1}
 N.Jk.prototype={
-$0:function(){var s,r=H.a(["/home"],t.s),q=new R.zJ($,!0,new N.jQ(H.a([],t.A_),t.eS),P.r(t.FE,t.sF))
+$0:function(){var s,r=H.a(["/home","/home"],t.s),q=new R.zJ($,!0,new N.jQ(H.a([],t.A_),t.eS),P.r(t.FE,t.sF))
 q.dG$=0
 s=t.nJ
 s=new Y.eZ(r,q,H.a([],t.om),P.ej(t.X,t.DW),new M.h3(s),new M.h3(s),!1,!1)
