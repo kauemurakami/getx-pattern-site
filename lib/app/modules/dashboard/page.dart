@@ -9,21 +9,20 @@ class DashboardPage extends GetView<DashboardController> {
     return GetRouterOutlet.builder(
       builder: (context, delegate, currentRoute) {
         //This router outlet handles the appbar and the bottom navigation bar
-        var currentLocation = currentRoute!.location!;
+        var currentLocation = currentRoute?.location!;
         var index = 0;
-        if (currentLocation.startsWith(Routes.INTRO) == true) {
+        if (currentLocation?.startsWith(Routes.INTRO) == true) {
           index = 1;
         }
-        if (currentLocation.startsWith(Routes.GET_START) == true) {
+        if (currentLocation?.startsWith(Routes.GET_START) == true) {
           index = 2;
         }
         return Scaffold(
           body: GetRouterOutlet(
-            delegate: delegate,
-            anchorRoute: Routes.DASHBOARD,
+            //anchorRoute: Routes.DASHBOARD,
             initialRoute: Routes.HOME,
             //anchorRoute: Routes.DASHBOARD,
-            key: Get.nestedKey(1),
+            key: Get.nestedKey(Routes.DASHBOARD),
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: index,
@@ -58,7 +57,13 @@ class DashboardPage extends GetView<DashboardController> {
                 ),
                 label: 'Intro',
               ),
-              // _Paths.HOME + _Paths.PRODUCTS
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.account_box_rounded,
+                  color: index == 2 ? Colors.black : Colors.grey,
+                ),
+                label: 'Começando',
+              ),
             ],
           ),
         );
