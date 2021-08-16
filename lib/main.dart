@@ -12,6 +12,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialBinding: DashboardBinding(),
     getPages: AppPages.pages,
+    theme: ThemeData.dark(),
     initialRoute: Routes.DASHBOARD,
     home: DashboardPage(),
   ));

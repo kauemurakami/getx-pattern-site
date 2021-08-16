@@ -15,7 +15,7 @@ class DashboardPage extends GetView<DashboardController> {
           children: [
             MenuWidget(),
             Expanded(
-                flex: 6,
+                flex: 7,
                 child: Obx(() => Container(
                     child:
                         this.controller.pages[this.controller.index.value]))),
