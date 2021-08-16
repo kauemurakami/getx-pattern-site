@@ -12,7 +12,14 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialBinding: DashboardBinding(),
     getPages: AppPages.pages,
-    theme: ThemeData.dark(),
+    theme: ThemeData(
+        fontFamily: 'RobotoMono',
+        scaffoldBackgroundColor: ThemeData.dark().scaffoldBackgroundColor,
+        textTheme: TextTheme(
+          caption: TextStyle(color: Colors.white),
+          bodyText1: TextStyle(color: Colors.white),
+          bodyText2: TextStyle(color: Colors.white),
+        )),
     initialRoute: Routes.DASHBOARD,
     home: DashboardPage(),
   ));

@@ -7,8 +7,6 @@ class IntroPage extends GetView {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.red,
-        body: SafeArea(child: Text('IntroController')));
+    return Scaffold(body: SafeArea(child: Text('IntroController')));
   }
 }

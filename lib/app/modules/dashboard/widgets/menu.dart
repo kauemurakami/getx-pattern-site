@@ -4,6 +4,7 @@ import 'package:getx_pattern_site/app/modules/dashboard/controller.dart';
 import 'package:getx_pattern_site/app/widgets/button.dart';
 import 'package:getx_pattern_site/core/values/colors.dart';
 import 'package:getx_pattern_site/core/values/strings.dart';
+import 'package:getx_pattern_site/core/values/themes/text.dart';
 
 class MenuWidget extends Container {
   final controller = Get.find<DashboardController>();
@@ -13,7 +14,8 @@ class MenuWidget extends Container {
       flex: 2,
       child: Container(
         decoration: BoxDecoration(
-            border: Border(right: BorderSide(width: 1.0, color: roxin))),
+          color: roxin,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,35 +26,38 @@ class MenuWidget extends Container {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
-                          'assets/rocket.png',
+                          'assets/images/rocket.png',
                         ),
                         fit: BoxFit.contain))),
             Text(
               gp,
-              style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.w900),
+              style: title_text,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+              padding: const EdgeInsets.only(left: 16.0, right: 8.0),
               child: Text(
                 slogan,
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400),
+                style: sub_title_menu_text,
               ),
             ),
             Divider(
               color: roxin,
             ),
-            CustomButtonWidget(
-              text: home,
-              callback: () => this.controller.changePage(0),
-            ),
-            CustomButtonWidget(
-              text: intro,
-              callback: () => this.controller.changePage(1),
-            ),
-            CustomButtonWidget(
-              text: starter,
-              callback: () => this.controller.changePage(2),
-            ),
+            Obx(() => CustomButtonWidget(
+                  text: home,
+                  callback: () => this.controller.changePage(0),
+                  seleceted: this.controller.index.value == 0 ? true : false,
+                )),
+            Obx(() => CustomButtonWidget(
+                  text: intro,
+                  callback: () => this.controller.changePage(1),
+                  seleceted: this.controller.index.value == 1 ? true : false,
+                )),
+            Obx(() => CustomButtonWidget(
+                  text: starter,
+                  callback: () => this.controller.changePage(2),
+                  seleceted: this.controller.index.value == 2 ? true : false,
+                )),
           ],
         ),
       ),
