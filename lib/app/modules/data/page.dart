@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern_site/app/modules/introduction/controller.dart';
-import 'package:getx_pattern_site/core/values/colors.dart';
+import 'package:getx_pattern_site/app/modules/data/controller.dart';
 import 'package:getx_pattern_site/core/values/strings.dart';
 import 'package:getx_pattern_site/core/values/themes/text.dart';
 
-class IntroPage extends GetView {
-  final controller = Get.put(IntroController());
+class DataPage extends GetView {
+  final controller = Get.put(DataController());
 
   @override
   Widget build(BuildContext context) {
@@ -22,25 +21,20 @@ class IntroPage extends GetView {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Estrutura',
+              data_tutorial,
               style: title_text,
             ),
             MouseRegion(
               child: InkWell(
                   onTap: () => this.controller.pubGetX(),
                   child: Text(
-                    'Observando a estrutura.',
+                    'Entendendo o diretório $data_tutorial.',
                     style: white_text,
                   )),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  '*Utilize os botões do mouse para dar zoom e arrastar a imagem.',
-                  textAlign: TextAlign.end,
-                  style: TextStyle(color: Colors.redAccent, fontSize: 12.0),
-                ),
                 Container(
                   height: 300,
                   width: Get.width,
@@ -50,14 +44,13 @@ class IntroPage extends GetView {
                       minScale: 0.5,
                       maxScale: 2.2,
                       child: Image.asset(
-                        'assets/images/mindmap_estructure.jpg',
+                        data_estructure_img,
                         fit: BoxFit.contain,
                       )),
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 16.0),
-                  child: Text(
-                      'Agora que você conhece a proposta e deu uma boa analisada na apresentação da estrutura, vamos parar um pouco para falar rapidamente sobre ela, antes de introduzir você na seção do GetX, para que você possa seguir nossos exemplos sem dificuldade ou dúvidas sobre nossos padrões de nomenclatura ou fluxo.\nPois bem, vamos falar rapidamente de um por um agora, não se preocupe se você está se aventurando e não conhece alguns dos conceitos que serão abordados aqui, isso é apenas uma apresentação formal com a estrutura, iremos falar mais detalhadamente sobre cada uma delas, com exemplos, em suas respectivas seções.!'),
+                  child: Text(data_describe),
                 ),
               ],
             ),

@@ -1,0 +1,3 @@
+class RoutesRepository {
+  RoutesRepository();
+}

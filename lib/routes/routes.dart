@@ -7,5 +7,8 @@ abstract class Routes {
   static const CADASTRO = '/cadastro';
   static const SPLASH = '/splash';
   static const INTRO = '/intro';
-  static const GET_START = '/start';
+  static const PROVIDER = '/provider';
+  static const DATA = '/data';
+  static const MODULE = '/module';
+  static const CORE = '/core';
 }

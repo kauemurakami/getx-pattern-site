@@ -2,7 +2,10 @@ const home = 'HOME';
 const getx = 'GetX';
 const gp = 'GetX Pattern';
 const intro = 'INTRODUÇÃO';
-const starter = 'COMEÇANDO';
+const data_tutorial = 'DATA';
+const module_tutorial = 'MÓDULO';
+const core_tutorial = 'CORE';
+const routes_tutorial = 'ROTAS';
 const slogan = 'Faça seus projetos decolarem!';
 const propose = 'Uma proposta de arquitetura pra você que utiliza GetX!';
 const urlGetPubDeb = 'https://pub.dev/packages/get';
@@ -25,3 +28,6 @@ const start_aprend =
     'Agora que você entendeu nossos objetivos, vamos aprender um pouco sobre a estrutura do getx_pattern !';
 const url_getx_pattern_snippets =
     'https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets&ssr=false#overview';
+const data_estructure_img = 'assets/images/data_estructure.jpg';
+const data_describe =
+    'Aqui não teremos muitos o que discutir, é apenas um repositório onde você irá abstrair/empacotar TUDO relacionado aos seus dados, seus modelos, provedores de dados, enums, apis e inclusive seus Services, que irão dispor dados por toda sua aplicação. Deixando seus dados disponivéis para todos os seus módulos, consequentemente só o que é vital para seu módulo ficará contido nele!!\nIsso foi pensado para que você possa manter sua estrutura de diretórios o menor possível ao trabalhar com flutter, e ao mesmo tempo, ser algo intuitivo e didático para acelerar sua curva de aprendizado.';

@@ -55,9 +55,24 @@ class MenuWidget extends Container {
                     seleceted: this.controller.index.value == 1 ? true : false,
                   )),
               Obx(() => CustomButtonWidget(
-                    text: starter,
+                    text: data_tutorial,
                     callback: () => this.controller.changePage(2),
                     seleceted: this.controller.index.value == 2 ? true : false,
+                  )),
+              Obx(() => CustomButtonWidget(
+                    text: module_tutorial,
+                    callback: () => this.controller.changePage(3),
+                    seleceted: this.controller.index.value == 3 ? true : false,
+                  )),
+              Obx(() => CustomButtonWidget(
+                    text: core_tutorial,
+                    callback: () => this.controller.changePage(4),
+                    seleceted: this.controller.index.value == 4 ? true : false,
+                  )),
+              Obx(() => CustomButtonWidget(
+                    text: routes_tutorial,
+                    callback: () => this.controller.changePage(5),
+                    seleceted: this.controller.index.value == 5 ? true : false,
                   )),
             ],
           ),
