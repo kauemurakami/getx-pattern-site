@@ -53,6 +53,7 @@ flutter:
     - assets/images/es-ES.png
     - assets/images/pt-BR.png
     - assets/images/eu-EUA.png
+    - assets/images/mindmap_estructure.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

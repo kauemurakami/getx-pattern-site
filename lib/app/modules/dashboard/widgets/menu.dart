@@ -10,55 +10,57 @@ class MenuWidget extends Container {
   final controller = Get.find<DashboardController>();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 2,
-      child: Container(
-        decoration: BoxDecoration(
-          color: roxin,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-                height: 180.0,
-                width: 220.0,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/rocket.png',
-                        ),
-                        fit: BoxFit.contain))),
-            Text(
-              gp,
-              style: title_text,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 8.0),
-              child: Text(
-                slogan,
-                style: sub_title_menu_text,
+    return Flexible(
+      child: FractionallySizedBox(
+        widthFactor: .3,
+        child: Container(
+          decoration: BoxDecoration(
+            color: roxin,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                  height: 180.0,
+                  width: 220.0,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/rocket.png',
+                          ),
+                          fit: BoxFit.contain))),
+              Text(
+                gp,
+                style: title_text,
               ),
-            ),
-            Divider(
-              color: roxin,
-            ),
-            Obx(() => CustomButtonWidget(
-                  text: home,
-                  callback: () => this.controller.changePage(0),
-                  seleceted: this.controller.index.value == 0 ? true : false,
-                )),
-            Obx(() => CustomButtonWidget(
-                  text: intro,
-                  callback: () => this.controller.changePage(1),
-                  seleceted: this.controller.index.value == 1 ? true : false,
-                )),
-            Obx(() => CustomButtonWidget(
-                  text: starter,
-                  callback: () => this.controller.changePage(2),
-                  seleceted: this.controller.index.value == 2 ? true : false,
-                )),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0, right: 8.0),
+                child: Text(
+                  slogan,
+                  style: sub_title_menu_text,
+                ),
+              ),
+              Divider(
+                color: roxin,
+              ),
+              Obx(() => CustomButtonWidget(
+                    text: home,
+                    callback: () => this.controller.changePage(0),
+                    seleceted: this.controller.index.value == 0 ? true : false,
+                  )),
+              Obx(() => CustomButtonWidget(
+                    text: intro,
+                    callback: () => this.controller.changePage(1),
+                    seleceted: this.controller.index.value == 1 ? true : false,
+                  )),
+              Obx(() => CustomButtonWidget(
+                    text: starter,
+                    callback: () => this.controller.changePage(2),
+                    seleceted: this.controller.index.value == 2 ? true : false,
+                  )),
+            ],
+          ),
         ),
       ),
     );

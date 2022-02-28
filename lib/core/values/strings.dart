@@ -23,3 +23,5 @@ const url_getx_snippets_img =
     'https://get-snippets.gallerycdn.vsassets.io/extensions/get-snippets/get-snippets/4.2.0/1628195542460/Microsoft.VisualStudio.Services.Icons.Default';
 const start_aprend =
     'Agora que você entendeu nossos objetivos, vamos aprender um pouco sobre a estrutura do getx_pattern !';
+const url_getx_pattern_snippets =
+    'https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets&ssr=false#overview';

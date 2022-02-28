@@ -9,11 +9,13 @@ class HomePage extends GetView {
   final controller = Get.put(HomeController());
   @override
   Widget build(BuildContext context) {
+    var html;
     return Scaffold(
         body: SafeArea(
             child: SingleChildScrollView(
       child: Container(
         height: Get.height,
+        width: Get.width,
         margin: EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -70,37 +72,40 @@ class HomePage extends GetView {
                             margin: EdgeInsets.only(top: 16.0),
                             padding: EdgeInsets.only(bottom: 16.0),
                             color: roxin.withOpacity(.1),
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Expanded(
-                                        flex: 1,
-                                        child: Container(
-                                          margin: EdgeInsets.only(
-                                              top: 16.0, bottom: 16.0),
-                                          height: 80.0,
-                                          width: 80.0,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      url_getx_snippets_img))),
-                                        )),
-                                    Expanded(
-                                      flex: 5,
-                                      child: Container(
-                                          width: Get.width,
-                                          child: Text(
-                                            getxsnippetsoffert,
-                                            maxLines: 4,
-                                          )),
-                                    ),
-                                  ],
-                                ),
-                                Text(start_aprend)
-                              ],
-                            ),
-                          ))),
+                            child: InkWell(
+                                onTap: () => controller.getGetxSnippets(),
+                                child: MouseRegion(
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Expanded(
+                                              flex: 1,
+                                              child: Container(
+                                                margin: EdgeInsets.only(
+                                                    top: 16.0, bottom: 16.0),
+                                                height: 80.0,
+                                                width: 80.0,
+                                                decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                        image: NetworkImage(
+                                                            url_getx_snippets_img))),
+                                              )),
+                                          Expanded(
+                                            flex: 5,
+                                            child: Container(
+                                                width: Get.width,
+                                                child: Text(
+                                                  getxsnippetsoffert,
+                                                  maxLines: 4,
+                                                )),
+                                          ),
+                                        ],
+                                      ),
+                                      Text(start_aprend)
+                                    ],
+                                  ),
+                                ))))),
           ],
         ),
       ),

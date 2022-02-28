@@ -6,9 +6,11 @@ class SPAWidget extends Container {
   final controller = Get.find<DashboardController>();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        flex: 6,
-        child: Obx(() => Container(
-            child: this.controller.pages[this.controller.index.value])));
+    return Flexible(
+      child: FractionallySizedBox(
+        widthFactor: 1,
+        child: Obx(() => this.controller.pages[this.controller.index.value]),
+      ),
+    );
   }
 }
